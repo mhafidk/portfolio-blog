@@ -14,7 +14,9 @@ const { pageTitle } = Astro.props;
   </head>
   <body class="bg-slate-50 text-slate-950">
     <Header />
-    <slot />
+    <div class="max-w-screen-lg mx-auto">
+      <slot />
+    </div>
     <Footer />
     <script>
       import "../scripts/menu.js";
