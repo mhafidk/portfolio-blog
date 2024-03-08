@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
+import { formatDate } from '../scripts/helper.js';
 import mhk from "../../public/mhk-potrait.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate } from '../scripts/helper.js';
 
 const pageTitle = "Muhammad Hafid K";
 const AllPosts = await Astro.glob('../pages/posts/*.md');
