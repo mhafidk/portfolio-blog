@@ -26,11 +26,11 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
       </div>
     </div>
     <div class="mt-12">
-      <h2 class="font-medium text-lg">Latest Blog <span class="text-violet-700">Posts</span></h2>
-      <div class="mt-4 grid grid-cols-1 gap-5 mb-8">
+      <h2 class="font-medium text-lg">Latest Blog Posts</h2>
+      <div class="mt-4 grid grid-cols-1 gap-6 mb-8">
         {
           Posts.map((post) =>
-            <div>
+            <div class="pl-4 border-l-2 border-violet-700">
               <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
               <div class="mt-2">
                 <div class="flex flex-wrap gap-1 text-sm text-violet-600">
@@ -44,7 +44,26 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
           )
         }
       </div>
-      <a href="/blog" class="bg-violet-700 hover:bg-violet-800 text-slate-50 px-3 py-2 text-sm">More post →</a>
+      <div class="flex justify-center">
+        <a href="/blog" class="bg-violet-700 hover:bg-violet-800 text-slate-50 px-3 py-2 text-sm">More post →</a>
+      </div>
+    </div>
+    <div class="mt-12">
+      <h2 class="font-medium text-lg">Experiences</h2>
+      <div class="mt-4">
+        <div class="">
+          <div class="flex justify-between">
+            <p>Backend Engineer at <a href="https://www.qontak.com" target="_blank" class="text-violet-700 hover:text-violet-800 underline">Qontak</a></p>
+            <p>2020 - Present</p>
+          </div>
+          <div class="flex gap-2 flex-wrap mt-2">
+            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby on Rails</p>
+            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby</p>
+            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">JavaScript</p>
+            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Go</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </BaseLayout>
