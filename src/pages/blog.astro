@@ -1,13 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate } from '../scripts/helper.js';
+
 const allPosts = await Astro.glob('../pages/posts/*.md');
 const pageTitle = "Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1>My Astro Learning Blog</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-      {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-    </ul>
-  </BaseLayout>
+  <div class="max-w-screen-sm mx-auto p-4">
+    <h1 class="mt-16 text-2xl font-semibold font-mono">Blog.</h1>
+    <div class="mt-16">
+      <div class="mt-4 grid grid-cols-1 gap-6 mb-12">
+        {
+          allPosts.map((post) =>
+            <div class="pl-4 border-l-2 border-violet-700">
+              <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
+              <p class="mt-2 text-sm text-slate-600">{formatDate(post.frontmatter.pubDate)}</p>
+              <div class="mt-2">
+                <div class="flex flex-wrap gap-1 text-xs text-violet-600">
+                  { post.frontmatter.tags.map((tag) =>
+                      <p class="px-1.5 py-0.5 border border-violet-600">{tag}</p>
+                    )
+                  }
+                </div>
+              </div>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import mhk from "../../public/mhk-potrait.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate } from '../scripts/helper.js';
 
 const pageTitle = "Muhammad Hafid K";
 const AllPosts = await Astro.glob('../pages/posts/*.md');
@@ -19,7 +20,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
     </div>
     <div class="">
       <h2 class="font-medium text-lg">A Little About <span class="text-violet-700">Me</span>&nbsp;&nbsp;👋</h2>
-      <div class="mt-2 text-neutral-600">
+      <div class="mt-2 text-slate-600">
         <p class="">I'm a software engineer based in Bogor, Indonesia. Currently, I'm working as a backend engineer at <a href="https://www.qontak.com" target="_blank" class="text-violet-700 hover:text-violet-800 underline">Qontak</a>. I'm focused on backend technology right now. I'm also interested in IoT and computer vision.</p>
         <p class="mt-2">Whem I'm away from keyboard, I usually play badminton 🏸 or try to check my food bucket list 🍲.</p>
         <p class="mt-2">Get to know me <a href="/about"  class="text-violet-700 hover:text-violet-800 underline">more</a> or read my <a href="/blog"  class="text-violet-700 hover:text-violet-800 underline">blog</a>.</p>
@@ -32,8 +33,9 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
           Posts.map((post) =>
             <div class="pl-4 border-l-2 border-violet-700">
               <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
+              <p class="mt-2 text-sm text-slate-600">{formatDate(post.frontmatter.pubDate)}</p>
               <div class="mt-2">
-                <div class="flex flex-wrap gap-1 text-sm text-violet-600">
+                <div class="flex flex-wrap gap-1 text-xs text-violet-600">
                   { post.frontmatter.tags.map((tag) =>
                       <p class="px-1.5 py-0.5 border border-violet-600">{tag}</p>
                     )
@@ -54,7 +56,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
         <div class="">
           <div class="flex flex-col md:flex-row justify-between">
             <p>Backend Engineer at <a href="https://www.qontak.com" target="_blank" class="text-violet-700 hover:text-violet-800 underline">Qontak</a></p>
-            <p class="text-sm md:text-base mt-1 md:mt-0 text-neutral-600">2020 - Present</p>
+            <p class="text-sm md:text-base mt-1 md:mt-0 text-slate-600">2020 - Present</p>
           </div>
           <div class="flex gap-2 flex-wrap mt-2 text-violet-600 text-sm">
             <p class="px-1.5 py-0.5 border border-violet-600">Ruby on Rails</p>
@@ -98,8 +100,8 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
     <div class="mt-20" id="contact">
       <h2 class="font-medium text-lg">Contact</h2>
       <div class="mt-4">
-        <p class="text-neutral-600">Have something to say? Ask a question or just say hi, anything! Feel free to contact me, my inbox is always open!</p>
-        <p class="text-neutral-600 mt-2">You can contact me through one of these platforms!</p>
+        <p class="text-slate-600">Have something to say? Ask a question or just say hi, anything! Feel free to contact me, my inbox is always open!</p>
+        <p class="text-slate-600 mt-2">You can contact me through one of these platforms!</p>
         <div class="flex items-center gap-8 mt-6">
           <a href="mailto:mhafidk@gmail.com" target="_blank"><img src="/email.svg" alt="" class="h-12 w-12"></a>
           <a href="https://www.linkedin.com/in/mhafidk" target="_blank"><img src="/linkedin.svg" alt="" class="h-10 w-10"></a>
