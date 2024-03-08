@@ -4,7 +4,7 @@ title: What is Go and Why I Learned It?
 image:
     url: "/post-4-cover.webp"
     alt: "Go"
-pubDate: 2022-07-23
+pubDate: 2023-07-23
 tags: ["Programming", "Go"]
 ---
 Ever heard about Go or Golang? If you are a software developer, I think you have heard about Go before. So, what is Go?

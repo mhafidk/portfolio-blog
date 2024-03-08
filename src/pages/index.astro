@@ -4,7 +4,8 @@ import mhk from "../../public/mhk-potrait.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Muhammad Hafid K";
-const Posts = await Astro.glob('../pages/posts/*.md');
+const AllPosts = await Astro.glob('../pages/posts/*.md');
+const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate) }).slice(0, 4)
 ---
 
 <BaseLayout pageTitle={pageTitle}>
