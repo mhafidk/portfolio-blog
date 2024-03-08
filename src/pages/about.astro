@@ -1,72 +1,32 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = "navy";
+const pageTitle = "About";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-    <style define:vars={{skillColor}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-      .skill {
-        color: var(--skillColor);
-        font-weight: bold;
-      }
-    </style>
-	</head>
-	<body>
-    <Header />
-
-    <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
-
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-      {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-    {happy && <p>I am happy to be learning Astro!</p>}
-
-    {finished && <p>I finished this tutorial!</p>}
-
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-    <Footer />
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <div class="max-w-screen-sm mx-auto p-4">
+    <h1 class="mt-16 text-2xl font-semibold">About.</h1>
+    <div class="mt-16">
+      <p>Hi, how are you? I hope you are fine!</p>
+      <p>My name is <span class="text-violet-700">Muhammad Hafid Khoirul</span>, people usually call me <span class="text-violet-700">Hafid</span>.</p>
+      <p class="mt-3 leading-relaxed">
+        I'm a software developer based in Bogor, Indonesia, currently working as
+        a backend engineer at <a class="text-violet-700 hover:text-violet-700 underline underline-offset-2" href="https://wwww.qontak.com" target="_blank" rel="noreferrer">Qontak</a>.
+        I have been working as a backend engineer since I graduated from Brawijaya University in 2020 with computer engineer major. So, it's been 4 years, time does flies fast.
+      </p>
+      <p class="mt-3 leading-relaxed">
+        I'm focused on backend technology right now. Mainly use Ruby on Rails at the moment, tried a lot of things, Go, Phoenix, NestJs, etc, love them.
+        Beside web development, I also interested in other fields like computer vision and IoT. Doing small projects in my spare time.
+        My thesis was about computer vision by the way, you can read <a class="text-violet-700 hover:text-violet-700 underline underline-offset-2" href="https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/7129" target="_blank" rel="noreferrer">here</a>.
+      </p>
+      <p class="mt-3 leading-relaxed">
+        I made this site to be my portfolio and blog. My writing skill needs a lot of practices... That's why I'm going to share everything I want here.
+        This will work also as my note, dont't forget everything after you learn something, take notes!
+      </p>
+      <p class="mt-3 leading-relaxed">
+        Finally, thank you for visiting this site, means a lot &nbsp;&#128156;&nbsp;
+      </p>
+    </div>
+  </div>
+</BaseLayout>
