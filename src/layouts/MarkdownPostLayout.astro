@@ -6,10 +6,10 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
   <div class="px-4">
-    <div class="w-[30rem] mx-auto">
+    <div class="max-w-screen-sm mx-auto">
       <h1 class="mt-12 text-center text-2xl font-semibold">{frontmatter.title}</h1>
     </div>
-    <p class="mt-3 mb-6 text-center text-slate-600">{formatDate(frontmatter.pubDate)}</p>
+    <p class="mt-3 mb-6 text-center text-sm text-slate-600">{formatDate(frontmatter.pubDate)}</p>
     <div class="max-w-screen-sm mx-auto prose prose-base prose-slate">
       <slot />
     </div>
