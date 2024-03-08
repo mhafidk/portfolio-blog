@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import mhk from "../../public/mhk-potrait.webp";
+import portfolioBlog from "../../public/portfolio-blog.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Muhammad Hafid K";
@@ -27,7 +28,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
     </div>
     <div class="mt-20">
       <h2 class="font-medium text-lg">Latest Blog Posts</h2>
-      <div class="mt-4 grid grid-cols-1 gap-6 mb-8">
+      <div class="mt-4 grid grid-cols-1 gap-6 mb-12">
         {
           Posts.map((post) =>
             <div class="pl-4 border-l-2 border-violet-700">
@@ -44,23 +45,23 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
           )
         }
       </div>
-      <div class="flex justify-center">
-        <a href="/blog" class="bg-violet-700 hover:bg-violet-800 text-slate-50 px-3 py-2 text-sm">More post →</a>
-      </div>
+      <button class="transition ease-in-out hover:translate-x-2 duration-300">
+        <a href="/blog" class="hover:text-violet-700">More post →</a>
+      </button>
     </div>
-    <div class="mt-20">
+    <!-- <div class="mt-20">
       <h2 class="font-medium text-lg">Experiences</h2>
       <div class="mt-4">
         <div class="">
-          <div class="flex justify-between">
+          <div class="flex flex-col md:flex-row justify-between">
             <p>Backend Engineer at <a href="https://www.qontak.com" target="_blank" class="text-violet-700 hover:text-violet-800 underline">Qontak</a></p>
-            <p>2020 - Present</p>
+            <p class="text-sm md:text-base mt-1 md:mt-0 text-neutral-600">2020 - Present</p>
           </div>
           <div class="flex gap-2 flex-wrap mt-2">
-            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby on Rails</p>
-            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby</p>
-            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">JavaScript</p>
-            <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Go</p>
+            <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Ruby on Rails</p>
+            <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Ruby</p>
+            <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">JavaScript</p>
+            <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Go</p>
           </div>
         </div>
       </div>
@@ -69,12 +70,29 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
       <h2 class="font-medium text-lg">Tools I've Been Familiar With</h2>
       <div class="mt-4">
         <div class="flex gap-2 flex-wrap mt-2">
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby on Rails</p>
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Ruby</p>
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">JavaScript</p>
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Go</p>
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Python</p>
-          <p class="text-sm font-semibold text-slate-50 px-2 py-1 bg-violet-700">Astro</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Ruby on Rails</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Ruby</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">JavaScript</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Go</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Python</p>
+          <p class="text-sm text-slate-50 px-2 py-1 bg-violet-700">Astro</p>
+        </div>
+      </div>
+    </div> -->
+    <div class="mt-20">
+      <h2 class="font-medium text-lg">Projects</h2>
+      <div class="mt-4">
+        <div class="">
+          <div class="max-h-96 w-full">
+            <img src="/portfolio-blog.webp" alt="Portfolio Blog" class="h-full bg-cover shadow">
+          </div>
+          <div class="mt-4">
+            <p class="text-center font-bold ">Personal Website</p>
+            <div class="flex justify-center gap-2 flex-wrap mt-2 text-violet-600 text-sm">
+              <p class="px-1.5 py-0.5 border border-violet-600">Astro</p>
+              <p class="px-1.5 py-0.5 border border-violet-600">Tailwind CSS</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
