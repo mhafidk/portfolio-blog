@@ -13,7 +13,7 @@ The reasons that convince me to start a blog are.
 
 ## To improve myself
 
-<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/PJys46ZiR3SfyOf2Gf0O">
+<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/PJys46ZiR3SfyOf2Gf0O" class="rounded">
 <font size="1">Photo by <a href="https://unsplash.com/@hjwinunsplsh?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jungwoo Hong</a> on <a href="https://unsplash.com/photos/cYUMaCqMYvI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></font>
 
 Yep, that’s true. I know my weaknesses. One of them is in writing skill. People can write, but are the results always good? No. A good writing is a writing that is easy to be understand, elaborate and connect the ideas well, and use appropriate words.
@@ -26,7 +26,7 @@ Writing a blog post not only improve my writing skill, but also my communication
 
 ## To understand something better
 
-<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/hoWh7HbNRmSCFw08DXzU">
+<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/hoWh7HbNRmSCFw08DXzU" class="rounded">
 <font size="1">Photo by <a href="https://unsplash.com/@timmossholder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tim Mossholder</a> on <a href="https://unsplash.com/photos/WE_Kv_ZB1l0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></font>
 
 There is a famous saying.
@@ -42,7 +42,7 @@ Furthermore, before I write about something I will study about it first.
 
 ## To share my knowledge
 
-<img style="width:100%;height:28rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/ev5Jt1cxTT2Slchj6omx">
+<img style="width:100%;height:28rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/ev5Jt1cxTT2Slchj6omx" class="rounded">
 <font size="1">Photo by <a href="https://unsplash.com/es/@ecasap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Elaine Casap</a> on <a href="https://unsplash.com/photos/qgHGDbbSNm8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></font>
 
 > Sharing is caring
@@ -56,7 +56,7 @@ I hope what I have written or am going to write can also help to solve other peo
 
 ## To make me stand out
 
-<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/xE73DFIaRDCOQkRj2se1">
+<img style="width:100%;height:26rem;object-fit:cover;margin-bottom: 0px;" src="https://media.graphassets.com/xE73DFIaRDCOQkRj2se1" class="rounded">
 <font size="1">Photo by <a href="https://unsplash.com/@rupert_britton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rupert Britton</a> on <a href="https://unsplash.com/photos/l37N7a1lL6w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></font>
 
 How many software engineers in the world? Many. In Indonesia alone, there are a lot of software engineers. So, how to be stand out in the sea of software engineers? There are numerous ways. I chose blogging as the method to be different from other software engineers.

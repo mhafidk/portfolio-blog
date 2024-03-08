@@ -35,7 +35,7 @@ After I decided to take computer major. I did my own research to find informatio
 I started coding, and... I found it interesting! I was also fascinated by the things that I would learn later. I also thought that a career in computer industry was cool. Now, I am working in software industry and it is really cool! It is true that if you want to know something, you need to dive down to it first.
 
 <p align="center">
-<img src="https://media.graphassets.com/sQA09hpTaiO8DqBFziI5">
+<img src="https://media.graphassets.com/sQA09hpTaiO8DqBFziI5" class="rounded">
 </p>
 
 Why I chose computer engineering?
