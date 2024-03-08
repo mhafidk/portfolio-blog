@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import mhk from "../../public/mhk-potrait.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate } from '../scripts/helper';
+
 const pageTitle = "Muhammad Hafid K";
 const Posts = await Astro.glob('../pages/posts/*.md');
 ---
@@ -8,7 +10,7 @@ const Posts = await Astro.glob('../pages/posts/*.md');
 <BaseLayout pageTitle={pageTitle}>
   <div class="max-w-screen-sm mx-auto p-4">
     <div class="flex items-center gap-6 my-16">
-      <img src="/mhk-potrait.webp" alt="MHK" class="rounded-full h-20 w-20">
+      <Image src={mhk} alt="MHK" class="rounded-full h-20 w-20" />
       <div class="">
         <p class="font-bold">Muhammad <span class="text-violet-700">Hafid</span> <span class="hidden sm:inline">Khoirul</span></p>
         <p class="text-sm">Backend Engineer at <a href="https://www.qontak.com" target="_blank" class="text-violet-700 hover:text-violet-800 underline">Qontak</a></p>
@@ -24,7 +26,7 @@ const Posts = await Astro.glob('../pages/posts/*.md');
     </div>
     <div class="mt-12">
       <h2 class="font-medium text-lg">Latest Blog <span class="text-violet-700">Posts</span></h2>
-      <div class="mt-4 grid grid-cols-1 gap-5">
+      <div class="mt-4 grid grid-cols-1 gap-5 mb-8">
         {
           Posts.map((post) =>
             <div>
@@ -41,6 +43,7 @@ const Posts = await Astro.glob('../pages/posts/*.md');
           )
         }
       </div>
+      <a href="/blog" class="bg-violet-700 hover:bg-violet-800 text-slate-50 px-3 py-2 text-sm">More post →</a>
     </div>
   </div>
 </BaseLayout>
