@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { formatDate } from '../scripts/helper.js';
+import BlogCard from '../components/BlogCard.astro';
 
 const AllPosts = await Astro.glob('../pages/posts/*.md');
 const sortedAllPost = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate) })
@@ -12,22 +12,7 @@ const pageTitle = "Blog";
     <h1 class="mt-16 text-2xl font-semibold font-mono">Blog.</h1>
     <div class="mt-16">
       <div class="mt-4 grid grid-cols-1 gap-6 mb-12">
-        {
-          sortedAllPost.map((post) =>
-            <div class="pl-4 border-l-2 border-violet-700">
-              <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
-              <p class="mt-2 text-sm text-slate-600">{formatDate(post.frontmatter.pubDate)}</p>
-              <div class="mt-2">
-                <div class="flex flex-wrap gap-1 text-xs text-violet-600">
-                  { post.frontmatter.tags.map((tag) =>
-                      <p class="px-1.5 py-0.5 border border-violet-600">{tag}</p>
-                    )
-                  }
-                </div>
-              </div>
-            </div>
-          )
-        }
+        { sortedAllPost.map((post) => <BlogCard post={post} />) }
       </div>
     </div>
   </div>

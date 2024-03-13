@@ -1,0 +1,17 @@
+---
+import { formatDate } from '../scripts/helper.js';
+
+const { post } = Astro.props;
+---
+<div class="pl-4 border-l-2 border-violet-700 hover:bg-violet-50 pt-3 pb-4 rounded-r">
+  <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
+  <p class="mt-2 text-sm text-slate-600">{formatDate(post.frontmatter.pubDate)}</p>
+  <div class="mt-2">
+    <div class="flex flex-wrap gap-1 text-xs text-violet-600">
+      { post.frontmatter.tags.map((tag) =>
+          <p class="px-1.5 py-0.5 border border-violet-600">{tag}</p>
+        )
+      }
+    </div>
+  </div>
+</div>

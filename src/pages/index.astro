@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import { formatDate } from '../scripts/helper.js';
 import mhk from "../../public/mhk-potrait.webp";
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BlogCard from '../components/BlogCard.astro';
 
 const pageTitle = "Muhammad Hafid K";
 const AllPosts = await Astro.glob('../pages/posts/*.md');
@@ -29,22 +29,7 @@ const Posts = AllPosts.sort(function(a, b) { return Date.parse(b.frontmatter.pub
     <div class="mt-20">
       <h2 class="font-medium text-lg">Latest Blog Posts</h2>
       <div class="mt-4 grid grid-cols-1 gap-6 mb-12">
-        {
-          Posts.map((post) =>
-            <div class="pl-4 border-l-2 border-violet-700">
-              <a href={post.url} class="hover:text-violet-800 underline">{post.frontmatter.title}</a>
-              <p class="mt-2 text-sm text-slate-600">{formatDate(post.frontmatter.pubDate)}</p>
-              <div class="mt-2">
-                <div class="flex flex-wrap gap-1 text-xs text-violet-600">
-                  { post.frontmatter.tags.map((tag) =>
-                      <p class="px-1.5 py-0.5 border border-violet-600">{tag}</p>
-                    )
-                  }
-                </div>
-              </div>
-            </div>
-          )
-        }
+        { Posts.map((post) => <BlogCard post={post} />) }
       </div>
       <button class="transition ease-in-out hover:translate-x-2 duration-300">
         <a href="/blog" class="hover:text-violet-700">More post →</a>
